@@ -32,3 +32,18 @@ if(uguaglianzaParola == true){
 }else{
     console.log('la parola non è palindroma!!');
 }
+
+
+
+
+
+
+let utenteSceltapd = prompt("Decidi tra \'pari\' o \'dispari\'!!");
+
+if (utenteSceltapd != "pari" && utenteSceltapd != "dispari") {
+    utenteSceltapd = "pari";
+alert ("Siccome non hai inserito ne pari ne dispari scelgo pari per te!!")
+}
+
+let sceltaNumero = Number.parseInt(prompt('Inserisci un numero tra 1 e 5!!'));
+
