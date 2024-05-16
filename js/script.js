@@ -56,3 +56,13 @@ function generateRandomNumber(){
 let numeroRandom = generateRandomNumber();
 
 
+function checkPariDispari(numeroUno, numeroDue){
+    const sommaNumeri = numeroUno + numeroDue;
+    if(sommaNumeri % 2 == 0){
+        const risultatoPariDispari = true;
+    }else{
+        const risultatoPariDispari = false;
+    }
+}
+
+let risultato = checkPariDispari(sceltaNumero, numeroRandom);
