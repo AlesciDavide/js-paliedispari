@@ -42,10 +42,14 @@ let utenteSceltapd = prompt("Decidi tra \'pari\' o \'dispari\'!!");
 
 if (utenteSceltapd != "pari" && utenteSceltapd != "dispari") {
     utenteSceltapd = "pari";
-alert ("Siccome non hai inserito ne pari ne dispari scelgo pari per te!!")
+alert("Siccome non hai inserito ne pari ne dispari scelgo pari per te!!");
 }
 
 let sceltaNumero = Number.parseInt(prompt('Inserisci un numero tra 1 e 5!!'));
+if(sceltaNumero < 1 || sceltaNumero > 5 || isNaN.sceltaNumero){
+    alert('Hai scelto un numero che non rientra nei parametri, sceglierò io per te!!');
+    sceltaNumero = generateRandomNumber();
+}
 
 
 function generateRandomNumber(){
