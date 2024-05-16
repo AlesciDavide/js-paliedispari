@@ -47,3 +47,12 @@ alert ("Siccome non hai inserito ne pari ne dispari scelgo pari per te!!")
 
 let sceltaNumero = Number.parseInt(prompt('Inserisci un numero tra 1 e 5!!'));
 
+
+function generateRandomNumber(){
+    const numeroRandom = Math.floor(Math.random() * 5) + 1;
+    return numeroRandom;
+}
+
+let numeroRandom = generateRandomNumber();
+
+
