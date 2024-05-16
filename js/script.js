@@ -3,18 +3,15 @@ function parolaPalindroma(parola){
     let i = 0;
     let j = parolaInserita.length -1;
     let uguaglianzaLettere = true;
-    while(j!=0){
-        if(uguaglianzaLettere == true){
+    while(j > i){
             if(parola[i] === parola[j]){
-                uguaglianzaLettere = true;
+                console.log(parola[i], parola[j]);
                 i++
                 j--
             }else{
                 uguaglianzaLettere = false;
+                break;
             }
-        }else{
-            j = 0;
-        }
     }
 return uguaglianzaLettere;
 }
@@ -22,11 +19,12 @@ return uguaglianzaLettere;
 
 let parolaUtente = (prompt('inserisci una parola:'));
 if(parolaUtente == null || parolaUtente[0] == ' ' || parolaUtente[parolaUtente.length -1] == ' '){
-    let parolaUtente = (prompt('inserisci una parola valida senza spazi!!'));
+    parolaUtente = (prompt('inserisci una parola valida senza spazi!!'));
 }
 
 const uguaglianzaParola = parolaPalindroma(parolaUtente);
 
+console.log(`Hai inserito la parola '${parolaUtente}'`)
 if(uguaglianzaParola == true){
     console.log('la parola è palindroma!!');
 }else{
@@ -46,7 +44,7 @@ alert("Siccome non hai inserito ne pari ne dispari scelgo pari per te!!");
 }
 
 let sceltaNumero = Number.parseInt(prompt('Inserisci un numero tra 1 e 5!!'));
-if(sceltaNumero < 1 || sceltaNumero > 5 || isNaN.sceltaNumero){
+if(sceltaNumero < 1 || sceltaNumero > 5 || isNaN(sceltaNumero)){
     alert('Hai scelto un numero che non rientra nei parametri, sceglierò io per te!!');
     sceltaNumero = generateRandomNumber();
 }
