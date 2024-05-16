@@ -58,11 +58,24 @@ let numeroRandom = generateRandomNumber();
 
 function checkPariDispari(numeroUno, numeroDue){
     const sommaNumeri = numeroUno + numeroDue;
+    let risultatoPariDispari;
     if(sommaNumeri % 2 == 0){
-        const risultatoPariDispari = true;
+        risultatoPariDispari = true;
     }else{
-        const risultatoPariDispari = false;
+        risultatoPariDispari = false;
     }
+return risultatoPariDispari;
 }
 
 let risultato = checkPariDispari(sceltaNumero, numeroRandom);
+
+console.log(`hai scelto: ${utenteSceltapd}
+Il tuo numero è: ${sceltaNumero} 
+Il numero del computer è: ${numeroRandom}
+La somma dei numeri è: ${sceltaNumero + numeroRandom}`);
+
+if(risultato == true && utenteSceltapd == 'pari'){
+    console.log('Complimenti hai vinto te!!!')
+}else{
+    console.log('Mi dispiace! Ha vinto il computer :(');
+}
