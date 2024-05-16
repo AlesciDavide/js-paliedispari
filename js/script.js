@@ -19,7 +19,11 @@ function parolaPalindroma(parola){
 return uguaglianzaLettere;
 }
 
-const parolaUtente = (prompt('inserisci una parola'));
+
+let parolaUtente = (prompt('inserisci una parola:'));
+if(parolaUtente == null || parolaUtente[0] == ' ' || parolaUtente[parolaUtente.length -1] == ' '){
+    let parolaUtente = (prompt('inserisci una parola valida senza spazi!!'));
+}
 
 const uguaglianzaParola = parolaPalindroma(parolaUtente);
 
