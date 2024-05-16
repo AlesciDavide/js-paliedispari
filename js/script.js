@@ -1,7 +1,6 @@
 function parolaPalindroma(parola){
-    let parolaInserita = (parola);
     let i = 0;
-    let j = parolaInserita.length -1;
+    let j = parola.length -1;
     let uguaglianzaLettere = true;
     while(j > i){
             if(parola[i] === parola[j]){
@@ -9,7 +8,7 @@ function parolaPalindroma(parola){
                 j--
             }else{
                 uguaglianzaLettere = false;
-                break;
+                j = 0;
             }
     }
 return uguaglianzaLettere;
