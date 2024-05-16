@@ -12,7 +12,19 @@ function parolaPalindroma(parola){
             }else{
                 uguaglianzaLettere = false;
             }
+        }else{
+            j = 0;
         }
     }
+return uguaglianzaLettere;
+}
 
+const parolaUtente = (prompt('inserisci una parola'));
+
+const uguaglianzaParola = parolaPalindroma(parolaUtente);
+
+if(uguaglianzaParola == true){
+    console.log('la parola è palindroma!!');
+}else{
+    console.log('la parola non è palindroma!!');
 }
